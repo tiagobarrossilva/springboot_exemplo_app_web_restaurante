@@ -1,0 +1,36 @@
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" th:fragment="fragmento_lista_contas(contas)"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+
+    
+
+    <div th:if="${#request.getParameter('msg')}" class="alert alert-primary" role="alert">
+        <p th:text="${#request.getParameter('msg')}"></p>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">Mesa/Cliente</th>
+                    <th scope="col">preço</th>
+                    
+                    
+                    <th scope="col">confirmação</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr th:each="c : ${contas}" th:object="${c}">
+                    
+                    <td  th:text="*{id_conta}"></td>
+                    <td th:text="*{valor}"></td>
+                    
+
+                    <td > <a th:href="@{'/finalizar_conta/'+ *{id_conta}}">confirmar</a></td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+</main>

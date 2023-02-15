@@ -1,0 +1,31 @@
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" th:fragment="fragmento_lista_produto_garcon(item_cardapio)"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+
+    <div th:if="${#request.getParameter('msg')}" class="alert alert-primary" role="alert">
+        <p th:text="${#request.getParameter('msg')}"></p>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">codigo do item</th>
+                    <th scope="col">descrição</th>
+                    <th scope="col">preco</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr th:each="c : ${item_cardapio}" th:object="${c}">
+                    <td  th:text="*{id_item_cardapio}"></td>
+                    <td th:text="*{nome}"></td>
+                    <td  th:text="*{preco}"></td>
+                    <!--<td  th:text="*{tipo}"></td>-->
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+</main>

@@ -1,0 +1,30 @@
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" th:fragment="mainpedidos(ItemPedido)">
+
+    <h2>Pedidos</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+            <thead>
+            <tr>
+                <th scope="col">#id_item_pedido</th>
+                <th scope="col">ativo</th>
+                <th scope="col">fk_id_item_cardapio</th>
+                <th scope="col">mesa</th>
+                <th scope="col">pronto</th>
+             
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="p : ${ItemPedido}" th:object="${p}">
+                <td th:text="*{id_item_pedido}"></td>
+                <td th:text="*{ativo}"></td>
+                <td th:text="*{fk_id_item_cardapio}"></td>
+                <td th:text="*{mesa}"></td>
+                <td th:text="*{pronto}"></td>
+                
+                
+                <td> <a th:href="@{'/deletar/'+ *{id_item_pedido}}">Deletar</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</main>

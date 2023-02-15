@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" href="/feane/images/favicon.png" type="">
+
+    <title> Nosso Restaurante </title>
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="feane/css/bootstrap.css" />
+
+    <!--owl slider stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <!-- nice select  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+    <!-- font awesome style -->
+    <link href="feane/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="feane/css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="feane/css/responsive.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="hero_area">
+        <div class="bg-box">
+            <img src="feane/images/hero-bg.jpg" alt="">
+        </div>
+        <!-- header section strats -->
+        <header class="header_section">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg custom_nav-container ">
+                    <a class="navbar-brand" href="index.html">
+                        <span>
+                    Nosso Restaurante
+                  </span>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class=""> </span>
+                </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav  mx-auto ">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/feane/menu.html">Menu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/feane/about.html">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <section class="book_section layout_padding">
+            <div class="container">
+                <div class="heading_container">
+                    <h2>
+                        <p style="color: #ffffff;">Cadastrar Produtos</p>
+                    </h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form_container">
+                            <form action="/add_cardapio" method="post">
+                                <div>
+                                    <input name="id_item_cardapio" type="text" class="form-control-plaintext" style="border-bottom-color: #ffffff; color: #ffffff;" placeholder="Codigo do item" /></br>
+                                </div>
+                                <div>
+                                    <input name="nome" type="text" class="form-control-plaintext" style="border-bottom-color: #ffffff; color: #ffffff;" placeholder="Nome" /></br>
+                                </div>
+                                <div>
+                                    <input name="preco" id="input" type="number" step="0.010" class="form-control-plaintext" style="border-bottom-color: #ffffff; color: #ffffff;" placeholder="Preço" /></br>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="tipo" id="exampleRadios1" value=1>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        <p style="color: #ffffff;">Comida</p>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="tipo" id="exampleRadios2" value=2>
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        <p style="color: #ffffff;">Bebida</p>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="tipo" id="exampleRadios3" value=3>
+                                    <label class="form-check-label" for="exampleRadios3">
+                                        <p style="color: #ffffff;">Sobremesas</p>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="tipo" id="exampleRadios4" value=4>
+                                    <label class="form-check-label" for="exampleRadios4">
+                                        <p style="color: #ffffff;">Outros</p>
+                                    </label>
+                                </div>
+                                
+
+                                <div class="btn_box">
+                                    <button>Cadastrar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
